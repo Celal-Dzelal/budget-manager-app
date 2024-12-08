@@ -57,11 +57,16 @@ harcamaListesi.forEach((harcama) => {
 
 function harcamalariTablodaGoster({ id, miktar, tarih, aciklama }) {
   //! Bir harcama nesnesi alır ve bu nesnenin özelliklerini destructuring yöntemiyle ayrıştırır:
-  harcamaTablosu.innerHTML += ` //! harcamaTablosu (önceki kodda tanımlanmış bir tablo elemanı) değişkenine yeni bir satır eklemek için innerHTML kullanılır. operatörü mevcut tablo içeriğine ekleme yapar, önceki veriler silinmez.
-            <tr> //! Yeni bir tablo satırı oluşturur.
-              <th scope="row">${aciklama}</th> //! Harcamanın açıklamasını (aciklama) tablo satırının ilk hücresine ekler. scope="row", bu hücrenin tablo satırını temsil ettiğini belirtir.
-              <td>${miktar}</td> //!  Harcamanın miktarını (miktar) ikinci hücreye ekler.
-              <td>${tarih}</td> //! Harcamanın tarihini (tarih) üçüncü hücreye ekler.
+  //! harcamaTablosu (önceki kodda tanımlanmış bir tablo elemanı) değişkenine yeni bir satır eklemek için innerHTML kullanılır. operatörü mevcut tablo içeriğine ekleme yapar, önceki veriler silinmez.
+  //! Yeni bir tablo satırı oluşturur.
+  //! Harcamanın açıklamasını (aciklama) tablo satırının ilk hücresine ekler. scope="row", bu hücrenin tablo satırını temsil ettiğini belirtir.
+  //!  Harcamanın miktarını (miktar) ikinci hücreye ekler.
+  //! Harcamanın tarihini (tarih) üçüncü hücreye ekler.
+  harcamaTablosu.innerHTML += ` 
+            <tr> 
+              <th scope="row">${aciklama}</th>  
+              <td>${miktar}</td> 
+              <td>${tarih}</td> 
               <td> <i  class="fa-solid fa-trash-can text-danger ms-4 " style="cursor:pointer" id=${id} > </td>
             </tr>
     `;
